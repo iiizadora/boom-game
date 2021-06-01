@@ -1,14 +1,43 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  overflow:hidden;
 }
 
+.header__title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(111,29,253,1) 50%, rgba(252,176,69,1) 100%);
+
+}
+
+.header__title h1 {
+  color: #fcb045;
+  font-family: 'Sigmar One', cursive ,sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+
+.header__title h2 {
+  color: #fcb045;
+  font-family: 'Ubuntu', cursive , sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
 .container-baloes {
   height: 100%;
   width: 100%;
