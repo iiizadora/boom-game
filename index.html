@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BOOM!</title>
-  
+  <link rel="shortcut icon" href="assets/baloon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
 
@@ -20,9 +20,15 @@
       <h1>BOOM!</h1>
       <h2>ESTOURE OS BALÕES </h2>
     </div>
+    <div class="dados-jogo">
     <div class="header__btn">
-      <button type="button" onclick="game_inicial()" class="btn">JOGAR</button>
+      <button type="button" id="btn" class="btn">JOGAR</button>
     </div>
+
+    <div class="score">
+      <p>Pontuação: <span id="updated-score">0</span> </p>
+    </div>
+  </div>
     </section>
   </header>
   <section class="container-baloes"></section>
