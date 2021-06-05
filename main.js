@@ -4,7 +4,7 @@ let pontuacao = 0;
 
 const iniciarGame = document.querySelector("#btn");
  iniciarGame.addEventListener("click",()=> comecarJogo());
-// função criada para iniciar o jogo
+
 function comecarJogo() {
 
   setInterval(adicionarBalao, 1000);
@@ -13,30 +13,24 @@ function comecarJogo() {
 
 function adicionarBalao() {
   const elementoImg = document.createElement("img");
-//adiciona um novo atributo que nesse caso está relacionado com <img src='' class=''>
+
   elementoImg.setAttribute("src", "./assets/balloon.svg");
   elementoImg.setAttribute("class", "balao");
 
-  const valorLeft = Math.round(Math.random() * 90); // para não quebrar a tela
+  const valorLeft = Math.round(Math.random() * 90); /
   const valorTop = Math.round(Math.random() * 90);
-  //para gerar números aleatórios e arredondados
 
-  elementoImg.style.left = valorLeft + "vw"; // posição referente a tela 
+
+  elementoImg.style.left = valorLeft + "vw"; 
   elementoImg.style.top = valorTop + "vh";
-  //como o .balão está em position: absolute, precisa atribuir um left e top para ele
   
-  containerBaloes.appendChild(elementoImg); // para adicionar o balão no container criado na section
+  
+  containerBaloes.appendChild(elementoImg); 
 
-
-  // iniciarGame.addEventListener("click", ()=>adicionarBalao(elementoImg));
 
 elementoImg.addEventListener("click", () => removeBalao(elementoImg,containerBaloes));
 
   }
-
-/*
-função criada para remover o balão com o click,passou 2 parâmetros :1 é da imagem que será removida:2º parâmetro é a classe que o elemento está referenciado. Dessa forma é possível raproveitar a função em outros lugares
- */
 
 
 function removeBalao(removeImg, containerElement ) {
@@ -51,7 +45,7 @@ function removeBalao(removeImg, containerElement ) {
 
   
 }
-//setInterval(adicionarBalao, 2000); //3000 milesegundos = 3 segundos
+
 
 
  
