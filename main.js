@@ -7,11 +7,12 @@ const iniciarGame = document.querySelector("#btn");
 
 function comecarJogo() {
 
-  setInterval(adicionarBalao, 1000);
+  setInterval(adicionarBalao, 500);
   
 }
 
 function adicionarBalao() {
+
   const elementoImg = document.createElement("img");
 
   elementoImg.setAttribute("src", "./assets/balloon.svg");
