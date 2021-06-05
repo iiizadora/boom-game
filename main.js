@@ -17,7 +17,7 @@ function adicionarBalao() {
   elementoImg.setAttribute("src", "./assets/balloon.svg");
   elementoImg.setAttribute("class", "balao");
 
-  const valorLeft = Math.round(Math.random() * 90); /
+  const valorLeft = Math.round(Math.random() * 90); 
   const valorTop = Math.round(Math.random() * 90);
 
 
