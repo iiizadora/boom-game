@@ -2,11 +2,19 @@ const containerBaloes = document.querySelector(".container-baloes");
 const elementPontuacao = document.querySelector("#updated-score");
 let pontuacao = 0;
 
+const iniciarGame = document.querySelector("#btn");
+ iniciarGame.addEventListener("click",()=> comecarJogo());
+// função criada para iniciar o jogo
+function comecarJogo() {
+
+  setInterval(adicionarBalao, 1000);
+  
+}
 
 function adicionarBalao() {
   const elementoImg = document.createElement("img");
 //adiciona um novo atributo que nesse caso está relacionado com <img src='' class=''>
-  elementoImg.setAttribute("src", "./assets/baloon.png");
+  elementoImg.setAttribute("src", "./assets/balloon.svg");
   elementoImg.setAttribute("class", "balao");
 
   const valorLeft = Math.round(Math.random() * 90); // para não quebrar a tela
@@ -20,10 +28,11 @@ function adicionarBalao() {
   containerBaloes.appendChild(elementoImg); // para adicionar o balão no container criado na section
 
 
+  // iniciarGame.addEventListener("click", ()=>adicionarBalao(elementoImg));
+
 elementoImg.addEventListener("click", () => removeBalao(elementoImg,containerBaloes));
 
-  
-}
+  }
 
 /*
 função criada para remover o balão com o click,passou 2 parâmetros :1 é da imagem que será removida:2º parâmetro é a classe que o elemento está referenciado. Dessa forma é possível raproveitar a função em outros lugares
@@ -39,7 +48,11 @@ function removeBalao(removeImg, containerElement ) {
   
   pontuacao = pontuacao + 1
   elementPontuacao.textContent = pontuacao;
+
   
-    
 }
- setInterval(adicionarBalao, 2000); //3000 milesegundos = 3 segundos
+//setInterval(adicionarBalao, 2000); //3000 milesegundos = 3 segundos
+
+
+ 
+

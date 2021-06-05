@@ -86,15 +86,16 @@ button {
 }
 
 .score {
-  padding: 1rem 2rem ;
+  padding: 1rem 2rem;
   background: #6316d3;
   border: none;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 0 1px #f9ad48;
-  margin-left: 80px;
+  
 }
 
-.score p , .updated-score  {
+.score p,
+.updated-score {
   font-family: "Ubuntu", cursive, sans-serif;
   font-size: 2rem;
   font-weight: 600;
@@ -103,10 +104,8 @@ button {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-
-
 .balao {
-  width: 80px;
+  width: 100px;
   position: absolute;
 }
 
@@ -131,11 +130,9 @@ button {
     font-size: 2rem;
   }
 
-  .score {
-    padding: 0.5rem 3rem ;
-  }
-
-  .score p, .updated-score  {
+  
+  .score p,
+  .updated-score {
     font-size: 1.5rem;
   }
 }
